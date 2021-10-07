@@ -1,0 +1,33 @@
+service: serverless-playground
+configValidationMode: error
+
+provider:
+  name: aws
+  versionFunctions: false
+  runtime: nodejs14.x
+  tracing:
+    apiGateway: true
+    lambda: true
+  environment:
+    STAGE: ${opt:stage}
+
+package:
+  individually: true
+  patterns:
+    - '!coverage/**'
+    - '!.serverless/**'
+    - '!src/**/*.test.js'
+    - '!src/**/*.snap'
+    - '!.*'
+    - '!.github/*'
+    - '!*.sh'
+    - '!env.sample'
+    - '!assets/**'
+    - '!package.json'
+    - '!yarn.lock'
+    - '!README.md'
+    - '!jest.config.js'
+
+functions:
+  app:
+    handler: src/index.handler
