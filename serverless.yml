@@ -1,3 +1,5 @@
+org: danwakeem
+app: serverless-playground
 service: serverless-playground
 configValidationMode: error
 
