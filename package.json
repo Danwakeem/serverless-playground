@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "start": "sls invoke local -f app",
+    "start:api": "sls offline start --noPrependStageInUrl",
     "test": "jest ./src --coverage",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix"
@@ -19,6 +20,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.2.4",
     "prettier": "^2.4.1",
-    "serverless": "^2.61.0"
+    "serverless": "^2.61.0",
+    "serverless-offline": "^8.2.0"
   }
 }

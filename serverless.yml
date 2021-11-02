@@ -13,6 +13,9 @@ provider:
   environment:
     STAGE: ${opt:stage}
 
+plugins:
+  - serverless-offline
+
 package:
   individually: true
   patterns:
