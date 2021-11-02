@@ -7,8 +7,8 @@ const uuids = [
 ];
 
 const handler = async (_, context) => {
-  const uuid = uuids[(new Date().getTime() % 5)];
-  context.serverlessSdk.tagEvent('uuid-tag', uuid, { customerId: uuid, isDemo: true })
+  const uuid = uuids[new Date().getTime() % 5];
+  context.serverlessSdk.tagEvent('uuid-tag', uuid, { customerId: uuid, isDemo: true });
   return {
     statusCode: 200,
     body: JSON.stringify({ message: 'hi mom' }),
