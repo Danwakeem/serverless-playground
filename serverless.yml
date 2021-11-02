@@ -35,17 +35,17 @@ functions:
     handler: src/index.handler
     events:
       - http:
-        path: /hello
-        method: GET
+          path: /hello
+          method: GET
   app2:
     handler: src/index.handler
     events:
       - http:
-        path: /hello/there
-        method: GET
+          path: /hello/there
+          method: GET
   app3:
     handler: src/index.handler
     events:
       - http:
-        path: /hello
-        method: POST
+          path: /hello
+          method: POST
