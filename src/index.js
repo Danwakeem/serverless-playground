@@ -1,6 +1,7 @@
 const handler = () => {
   return {
-    message: 'hi mom',
+    statusCode: 200,
+    body: JSON.stringify({ message: 'hi mom' })
   };
 };
 
