@@ -5,7 +5,8 @@ describe('index', () => {
     const expectedMessage = 'hi mom';
     const output = handler();
     expect(output).toEqual({
-      message: expectedMessage,
+      statusCode: 200,
+      body: JSON.stringify({ message: expectedMessage }),
     });
   });
 });
